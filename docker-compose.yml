@@ -14,4 +14,4 @@ services:
     volumes:
       - ./frontend/dist/frontend/browser:/usr/share/nginx/html
     ports:
-      - "4200:80"
+      - "80:80"

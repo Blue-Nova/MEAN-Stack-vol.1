@@ -1,4 +1,5 @@
-div {
+/* You can add global styles to this file, and also import other style files */
+.container {
     margin: 0 auto;
     width: 100%;
     max-width: 1140px;
@@ -9,7 +10,15 @@ div {
     align-items: center;
     height: 100vh;
 }
-div > *{
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+.header > a {
     padding: 20px;
     border: 1px solid black;
     border-radius: 5px;

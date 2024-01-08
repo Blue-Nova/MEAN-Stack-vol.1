@@ -6,6 +6,9 @@ button{
 .selected-user-info{
     border: 1px solid black;
 }
+.main-div{
+    border: 1px solid black;
+}
 .info{
     font-weight: bold;
     color: rgb(255, 0, 0);

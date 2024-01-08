@@ -1,4 +1,9 @@
 <div class="container">
-    <app-home></app-home>
-    <app-list></app-list>
-</div>
+    <div class="header">
+        <h1 routerLink="">Angular 2</h1>
+        <a routerLink="home">Home</a>
+        <a routerLink="list">List</a>
+    </div>
+    <div>
+        <router-outlet class="router"></router-outlet>
+    </div>
