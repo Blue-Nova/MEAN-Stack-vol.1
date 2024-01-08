@@ -1,8 +1,10 @@
-<ul>
-    <li>name: <p class="info">{{ data.name }}</p></li>
-    <li>email: <p class="info">{{ data.email }}</p></li>
-    <li>id: <p class="info">{{ data._id }}</p></li>
-</ul>
-<input type="number" [(ngModel)]="index" (keyup)="onInputChange($event)"/>
-<button (click)="onButtonClick()">Click</button>
-<p>{{ index }}</p>
+<div>
+    <ul>
+        <li>name: <p class="info">{{ data.name }}</p></li>
+        <li>email: <p class="info">{{ data.email }}</p></li>
+        <li>id: <p class="info">{{ data._id }}</p></li>
+    </ul>
+    <input type="number" [(ngModel)]="index" (keyup.enter)="onInputChange($event)"/>
+    <button (click)="onButtonClick()">Click</button>
+    <p>{{ index }}</p>
+</div>

@@ -1,25 +1,22 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [],
+  templateUrl: './list.component.html',
+  styleUrl: './list.component.css'
 })
-export class HomeComponent {
+export class ListComponent {
   data: any = [];
-  index: number = 0;
 
   constructor(private http: HttpClient) {
     this.fetchMessage();
   }
 
   async fetchMessage() {
-    this.http.get(`http://localhost:3000/api/message/${this.index}`).subscribe((response: any) => {
+    this.http.get(`http://localhost:3000/api/message/all`).subscribe((response: any) => {
       this.data = response;
     });
   }

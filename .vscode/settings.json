@@ -1,0 +1,10 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "^.+\\.(js|html|ts|css)$",
+                "cmd": "cd ./frontend && ng build",
+                "isAsync": true,
+            }]
+    }
+}
