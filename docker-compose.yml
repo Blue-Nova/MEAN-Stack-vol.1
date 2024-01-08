@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend/dist/frontend/browser:/usr/share/nginx/html
+    ports:
+      - "4200:80"
