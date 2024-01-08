@@ -13,13 +13,28 @@ app.use((req, res, next) => {
 });
 
 // Connect to MongoDB with Mongoose
-mongoose.connect('mongodb+srv://test-user:123123123@sendwhenicant-dev.btlg11n.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://blue-dev:CGRfO1KFRUhY4oDi@sendwhenicant-dev.btlg11n.mongodb.net/?retryWrites=true&w=majority')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error(err));
 
-app.get('/api/message/:index', (req, res) => {
+app.get('/api/get/index/:index', (req, res) => {
   // return the user at index
-  User.findOne({}).skip(parseInt(req.params.index)).exec()
+  User.findOne({}).skip(req.params.index).exec()
+    .then(user => {
+      res.json(user)})
+    .catch(err => console.error(err));
+});
+
+app.get('/api/get/all', async (req, res) => {
+  // return all users
+  await User.find({}).exec().then(users => {
+    res.json(users)})
+    .catch(err => console.error(err));
+});
+
+app.get('/api/get/id/:id', async (req, res) => {
+  // return the user with id
+  await User.findById(req.params.id).exec()
     .then(user => {
       res.json(user)})
     .catch(err => console.error(err));

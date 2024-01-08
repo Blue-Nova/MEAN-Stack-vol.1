@@ -1,0 +1,12 @@
+button{
+    /* default button styling should not be */
+    border: none;
+    background-color: transparent;
+}
+.selected-user-info{
+    border: 1px solid black;
+}
+.info{
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}

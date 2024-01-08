@@ -19,7 +19,7 @@ export class HomeComponent {
   }
 
   async fetchMessage() {
-    this.http.get(`http://localhost:3000/api/message/${this.index}`).subscribe((response: any) => {
+    this.http.get(`http://localhost:3000/api/get/index/${this.index}`).subscribe((response: any) => {
       this.data = response;
     });
   }
