@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 });
 
 // Connect to MongoDB with Mongoose
-mongoose.connect('mongodb+srv://blue-dev:CGRfO1KFRUhY4oDi@sendwhenicant-dev.btlg11n.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://test-user:123123123@sendwhenicant-dev.btlg11n.mongodb.net/?retryWrites=true&w=majority')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error(err));
 
